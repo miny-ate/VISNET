@@ -488,7 +488,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   display: grid;
   grid-template-columns: repeat(4, 1fr);
   gap: 24px;
-  margin-bottom: 64px;
 }
 
 .activity-card {
@@ -508,39 +507,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 .activity-card h3 { font-weight: 600; margin-bottom: 8px; color: var(--dark); }
 .activity-card p  { font-size: .9rem; color: var(--text-muted); }
 
-/* Summit feature */
-.summit-feature {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-  background: var(--green-pale);
-  border-radius: var(--radius-lg);
-  overflow: hidden;
-}
 
-.summit-img-wrap { position: relative; }
-.summit-img { width: 100%; height: 380px; object-fit: cover; }
-.summit-tag {
-  position: absolute;
-  top: 20px; left: 20px;
-  background: var(--gold);
-  color: var(--white);
-  font-size: .75rem;
-  font-weight: 700;
-  padding: 6px 14px;
-  border-radius: 100px;
-}
-
-.summit-content { padding: 40px 40px 40px 0; }
-.summit-title {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  font-weight: 700;
-  margin-bottom: 16px;
-  color: var(--dark);
-}
-.summit-desc { color: var(--text-muted); margin-bottom: 28px; }
 
 /* =============================================
    LEADERSHIP
@@ -824,9 +791,6 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 
   .activities-grid { grid-template-columns: 1fr 1fr; }
 
-  .summit-feature { grid-template-columns: 1fr; }
-  .summit-content { padding: 32px; }
-  .summit-img { height: 240px; }
 
   .leaders-grid { grid-template-columns: 1fr 1fr; gap: 20px; }
   .leader-img-wrap { height: 220px; }
