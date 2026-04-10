@@ -355,19 +355,21 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 .hero-img-frame {
-  width: 300px; height: 300px;
+  width: 360px; height: 360px;
   border-radius: 50%;
   overflow: hidden;
   border: 4px solid rgba(255,255,255,.12);
-  box-shadow: 0 0 80px rgba(45,134,83,.4);
-  background: rgba(255,255,255,.05);
+  box-shadow: 0 0 80px rgba(45,134,83,.4), 0 0 0 12px rgba(255,255,255,.04);
+  background: rgba(20,40,20,.6);
   display: flex; align-items: center; justify-content: center;
 }
 
 .hero-logo-img {
   width: 100%; height: 100%;
-  object-fit: contain;
-  padding: 20px;
+  object-fit: cover;
+  object-position: center;
+  padding: 0;
+  border-radius: 50%;
 }
 
 .floating-card {
@@ -782,7 +784,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .hero-actions { justify-content: center; }
   .hero-stats { justify-content: center; }
   .hero-visual { order: -1; }
-  .hero-img-frame { width: 220px; height: 220px; }
+  .hero-img-frame { width: 260px; height: 260px; }
   .floating-card { display: none; }
 
   .about-grid { grid-template-columns: 1fr; gap: 40px; }
