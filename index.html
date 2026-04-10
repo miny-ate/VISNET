@@ -1,24 +1,370 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VISNET – Vihiga Students Network</title>
+  <meta name="description" content="The Vihiga Students Network (VISNET) – uniting tertiary and university learners from Vihiga County through mentorship, innovation, and community development." />
+  <link rel="stylesheet" href="style.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+</head>
+<body>
 
-  <head>
-    <meta charset="UTF-8" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
-    <title>Vihiga Students Network (VISNET) Official Website</title>    
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
-  </head>
+  <!-- ===== NAVBAR ===== -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="nav-logo">
+        <div class="logo-mark">V</div>
+        <div class="logo-text">
+          <span class="logo-name">VISNET</span>
+          <span class="logo-sub">Vihiga Students Network</span>
+        </div>
+      </a>
+      <nav class="nav-links">
+        <a href="#about">About</a>
+        <a href="#activities">Activities</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#contact">Contact</a>
+      </nav>
+      <button class="nav-cta" onclick="scrollToSection('contact')">Join Us</button>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#about" onclick="closeMobileMenu()">About</a>
+      <a href="#activities" onclick="closeMobileMenu()">Activities</a>
+      <a href="#leadership" onclick="closeMobileMenu()">Leadership</a>
+      <a href="#contact" onclick="closeMobileMenu()">Contact</a>
+    </div>
+  </header>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-    <script
-      defer
-      src="%VITE_ANALYTICS_ENDPOINT%/umami"
-      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
-  </body>
+  <!-- ===== HERO ===== -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-orb orb1"></div>
+      <div class="hero-orb orb2"></div>
+      <div class="hero-grid"></div>
+    </div>
+    <div class="hero-inner">
+      <div class="hero-content">
+        <div class="hero-badge">
+          <span class="badge-dot"></span>
+          Largest Student Network in Vihiga County
+        </div>
+        <h1 class="hero-title">
+          Empowering Students Through
+          <span class="title-accent">Mentorship &amp; Innovation</span>
+        </h1>
+        <p class="hero-desc">
+          VISNET unites tertiary and university learners from Vihiga County, fostering brotherhood, mentorship, and bridging the gap between education and entrepreneurship.
+        </p>
+        <div class="hero-actions">
+          <button class="btn-primary" onclick="scrollToSection('contact')">Get Involved</button>
+          <button class="btn-secondary" onclick="scrollToSection('about')">Learn More</button>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-num">500+</span>
+            <span class="stat-label">Members</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">5+</span>
+            <span class="stat-label">Years Active</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-num">47</span>
+            <span class="stat-label">Institutions</span>
+          </div>
+        </div>
+      </div>
+      <div class="hero-visual">
+        <div class="hero-img-frame">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663288645168/VeJQfFdA9ErTk6S2qSfxm5/visnet-logo_5388dab4.jpg" alt="VISNET Logo" class="hero-logo-img" />
+        </div>
+        <div class="floating-card card1">
+          <span class="fc-icon">🎓</span>
+          <span class="fc-text">Mentorship</span>
+        </div>
+        <div class="floating-card card2">
+          <span class="fc-icon">💡</span>
+          <span class="fc-text">Innovation</span>
+        </div>
+        <div class="floating-card card3">
+          <span class="fc-icon">🤝</span>
+          <span class="fc-text">Brotherhood</span>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span>Scroll</span>
+    </div>
+  </section>
 
+  <!-- ===== ABOUT ===== -->
+  <section class="about section" id="about">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-img-wrap">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663288645168/VeJQfFdA9ErTk6S2qSfxm5/visnet-about-photo_7efed9d6.jpg" alt="VISNET Community" class="about-img" />
+          <div class="about-img-badge">
+            <span class="aib-num">2019</span>
+            <span class="aib-text">Founded</span>
+          </div>
+        </div>
+        <div class="about-content">
+          <div class="section-label">Who We Are</div>
+          <h2 class="section-title">About VISNET</h2>
+          <p class="about-desc">
+            The Vihiga Students Network (VISNET) is the largest student body representing tertiary and university learners from Vihiga County, Kenya. Our mission is to unite students, enhance brotherhood, and create a broad-based network for community development.
+          </p>
+          <div class="about-pillars">
+            <div class="pillar">
+              <div class="pillar-icon">🏘️</div>
+              <div>
+                <h4>Community First</h4>
+                <p>Building strong bonds among students across Vihiga County</p>
+              </div>
+            </div>
+            <div class="pillar">
+              <div class="pillar-icon">🌱</div>
+              <div>
+                <h4>Mentorship &amp; Growth</h4>
+                <p>Guiding students toward professional and personal excellence</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ACTIVITIES ===== -->
+  <section class="activities section" id="activities">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">What We Do</div>
+        <h2 class="section-title">Our Key Activities</h2>
+        <p class="section-desc">VISNET drives meaningful initiatives that strengthen collaboration, promote innovation, and support community development</p>
+      </div>
+      <div class="activities-grid">
+        <div class="activity-card">
+          <div class="ac-icon">🎯</div>
+          <h3>Mentorship Programs</h3>
+          <p>Professional guidance and leadership development for students</p>
+        </div>
+        <div class="activity-card">
+          <div class="ac-icon">💻</div>
+          <h3>ICT Partnerships</h3>
+          <p>Tech sector attachments and digital innovation opportunities</p>
+        </div>
+        <div class="activity-card">
+          <div class="ac-icon">📊</div>
+          <h3>Business Summit</h3>
+          <p>Annual event bridging education and entrepreneurship</p>
+        </div>
+        <div class="activity-card">
+          <div class="ac-icon">🌍</div>
+          <h3>Community Development</h3>
+          <p>Youth empowerment and social advocacy initiatives</p>
+        </div>
+      </div>
+
+      <!-- Featured: Business Summit -->
+      <div class="summit-feature">
+        <div class="summit-img-wrap">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663288645168/VeJQfFdA9ErTk6S2qSfxm5/section-mentorship-5hSBd4DcSqBVV7ih9kYVez.webp" alt="Mentorship" class="summit-img" />
+          <div class="summit-tag">Featured Initiative</div>
+        </div>
+        <div class="summit-content">
+          <h3 class="summit-title">VISNET Business Summit</h3>
+          <p class="summit-desc">Our flagship annual event brings together students, entrepreneurs, and business leaders to share knowledge, foster innovation, and create opportunities for youth entrepreneurship. The summit features workshops, keynote presentations, and networking sessions.</p>
+          <a href="#contact" class="btn-primary">Learn About Summit</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== LEADERSHIP ===== -->
+  <section class="leadership section" id="leadership">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Our Team</div>
+        <h2 class="section-title">Leadership Team</h2>
+        <p class="section-desc">Dedicated leaders driving VISNET's mission forward</p>
+      </div>
+      <div class="leaders-grid">
+        <div class="leader-card">
+          <div class="leader-img-wrap">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663288645168/VeJQfFdA9ErTk6S2qSfxm5/president-walter-gidei-cropped_a2f70945.png" alt="Hon Walter Gidei" />
+          </div>
+          <div class="leader-info">
+            <h3>Hon Walter Gidei</h3>
+            <span class="leader-role">President</span>
+          </div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-img-wrap">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663288645168/VeJQfFdA9ErTk6S2qSfxm5/secretary-chelsea-agani_1c98cbf3.png" alt="Chelsea Agani" />
+          </div>
+          <div class="leader-info">
+            <h3>Chelsea Agani</h3>
+            <span class="leader-role">Secretary General</span>
+          </div>
+        </div>
+        <div class="leader-card">
+          <div class="leader-img-wrap">
+            <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663288645168/VeJQfFdA9ErTk6S2qSfxm5/treasurer-phemy-kageha_d5960700.png" alt="Phemy Kageha" />
+          </div>
+          <div class="leader-info">
+            <h3>Phemy Kageha</h3>
+            <span class="leader-role">Treasurer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== ICT SECTION ===== -->
+  <section class="ict section">
+    <div class="container">
+      <div class="ict-grid">
+        <div class="ict-content">
+          <div class="section-label">Tech & Innovation</div>
+          <h2 class="section-title">ICT Partnerships &amp; Innovation</h2>
+          <p class="ict-desc">VISNET has secured strategic ICT partnerships providing students with attachment opportunities and exposure to the tech sector. Through collaborations with innovation hubs and tech companies, we're preparing the next generation of digital leaders.</p>
+          <ul class="ict-list">
+            <li><span class="check">✓</span> Tech sector internship and attachment programs</li>
+            <li><span class="check">✓</span> Innovation lab access and mentorship</li>
+            <li><span class="check">✓</span> Konza Technopolis partnership and visits</li>
+            <li><span class="check">✓</span> Digital skills training and certification</li>
+          </ul>
+        </div>
+        <div class="ict-img-wrap">
+          <img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663288645168/VeJQfFdA9ErTk6S2qSfxm5/section-ict-tech-mfxaL8qBb8yyWejw2tXbd2.webp" alt="ICT Partnerships" class="ict-img" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== CONTACT ===== -->
+  <section class="contact section" id="contact">
+    <div class="container">
+      <div class="section-header">
+        <div class="section-label">Reach Out</div>
+        <h2 class="section-title">Get In Touch</h2>
+        <p class="section-desc">Interested in joining VISNET or partnering with us? We'd love to hear from you!</p>
+      </div>
+      <div class="contact-grid">
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="ci-icon">📞</div>
+            <div>
+              <h4>Phone</h4>
+              <a href="tel:+254713828234">+254 713 828 234</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">✉️</div>
+            <div>
+              <h4>Email</h4>
+              <a href="mailto:info@visnet.co.ke">info@visnet.co.ke</a>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="ci-icon">📍</div>
+            <div>
+              <h4>Location</h4>
+              <span>Vihiga County, Kenya</span>
+            </div>
+          </div>
+          <div class="partnership-box">
+            <h4>Open for Partnerships</h4>
+            <p>VISNET actively seeks partnerships with organizations, institutions, and businesses that share our vision of empowering students and fostering innovation. Whether you're interested in sponsoring events, providing internships, or collaborating on initiatives, we'd like to work with you.</p>
+            <button class="btn-primary">Become a Partner</button>
+          </div>
+        </div>
+        <form class="contact-form" id="contactForm" onsubmit="handleSubmit(event)">
+          <h3>Send us a Message</h3>
+          <div class="form-group">
+            <label for="name">Full Name</label>
+            <input type="text" id="name" name="name" placeholder="Your full name" required />
+          </div>
+          <div class="form-group">
+            <label for="email">Email Address</label>
+            <input type="email" id="email" name="email" placeholder="your@email.com" required />
+          </div>
+          <div class="form-group">
+            <label for="subject">Subject</label>
+            <select id="subject" name="subject">
+              <option value="">Select a subject</option>
+              <option value="membership">Membership Inquiry</option>
+              <option value="partnership">Partnership</option>
+              <option value="summit">Business Summit</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="5" placeholder="Tell us more..." required></textarea>
+          </div>
+          <button type="submit" class="btn-primary btn-full">Send Message</button>
+          <div class="form-success" id="formSuccess">
+            ✅ Thank you! Your message has been sent. We'll get back to you soon.
+          </div>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== FOOTER ===== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="nav-logo">
+            <div class="logo-mark">V</div>
+            <div class="logo-text">
+              <span class="logo-name">VISNET</span>
+              <span class="logo-sub">Vihiga Students Network</span>
+            </div>
+          </div>
+          <p>Empowering students through mentorship and innovation</p>
+        </div>
+        <div class="footer-col">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#activities">Activities</a></li>
+            <li><a href="#leadership">Leadership</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Programs</h5>
+          <ul>
+            <li><a href="#activities">Mentorship</a></li>
+            <li><a href="#activities">Business Summit</a></li>
+            <li><a href="#activities">ICT Partnerships</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h5>Contact</h5>
+          <p>+254 713 828 234</p>
+          <p>Vihiga County, Kenya</p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2026 Vihiga Students Network (VISNET). All rights reserved.</p>
+        <p class="footer-tagline">United for Excellence | Empowering Tomorrow's Leaders</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
 </html>
