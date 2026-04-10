@@ -1,96 +1,24 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VisNet | Vihiga Student Network</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
 
-<header>
-  <h1>VISNET</h1>
-  <nav>
-    <a href="#about">About</a>
-    <a href="#activities">Activities</a>
-    <a href="#gallery">Gallery</a>
-    <a href="#leadership">Leadership</a>
-    <a href="#contact">Contact</a>
-  </nav>
-</header>
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1" />
+    <title>Vihiga Students Network (VISNET) Official Website</title>    
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
 
-<section class="hero">
-  <div class="hero-content">
-    <h2>Empowering Students Across Vihiga</h2>
-    <p>Leadership • Unity • Opportunity</p>
-    <a href="#contact" class="btn">Join VisNet</a>
-  </div>
-</section>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+    <script
+      defer
+      src="%VITE_ANALYTICS_ENDPOINT%/umami"
+      data-website-id="%VITE_ANALYTICS_WEBSITE_ID%"></script>
+  </body>
 
-<section id="about" class="fade-in">
-  <h2>About VisNet</h2>
-  <p>
-    Vihiga Student Network (VisNet) is a vibrant student body connecting youth
-    across institutions to foster leadership, collaboration, and community impact.
-  </p>
-</section>
-
-<section id="activities" class="fade-in">
-  <h2>What We Do</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f">
-      <h3>Student Forums</h3>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1509099836639-18ba1795216d">
-      <h3>Leadership Programs</h3>
-    </div>
-    <div class="card">
-      <img src="https://images.unsplash.com/photo-1521737604893-d14cc237f11d">
-      <h3>Community Outreach</h3>
-    </div>
-  </div>
-</section>
-
-<section id="gallery" class="fade-in">
-  <h2>Gallery</h2>
-  <div class="gallery">
-    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998">
-    <img src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac">
-    <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b">
-  </div>
-  <p style="margin-top:10px;">(Replace these with actual VisNet photos)</p>
-</section>
-
-<section id="leadership" class="fade-in">
-  <h2>Leadership</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Chairperson</h3>
-      <p>Student Leader</p>
-    </div>
-    <div class="card">
-      <h3>Secretary</h3>
-      <p>Student Leader</p>
-    </div>
-    <div class="card">
-      <h3>Treasurer</h3>
-      <p>Student Leader</p>
-    </div>
-  </div>
-</section>
-
-<section id="contact" class="fade-in">
-  <h2>Join VisNet</h2>
-  <p>Email: visnet@gmail.com</p>
-  <a href="https://wa.me/2547XXXXXXXX" class="btn">Chat on WhatsApp</a>
-</section>
-
-<footer>
-  <p>© 2026 VisNet | Vihiga Student Network</p>
-</footer>
-
-<script src="script.js"></script>
-</body>
 </html>
